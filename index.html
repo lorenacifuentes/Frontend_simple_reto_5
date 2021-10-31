@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>  
+    <title>Formulario </title>
+</head>
+<!--Tabla categoria-->
+<body>
+    <!--Este es el codigo para crear el titulo-->
+    <span style="color:cornflowerblue"><center><h2>HOTELES</h2></center></span>
+    <span style="color:rgb(58, 115, 221)"><h3>CATEGORIAS</h3></span>
+    <!--Formulario Habitación-->
+    <div id="resultado1"></div>
+    <fieldset style="width: 15%">
+        <legend>Creación de Categorias</legend>
+    <table>
+        <tbody>
+        <!--    <script type="text/javascript"> 
+                    window.onload = consultarCategory();
+                </script>-->
+            <div>
+                <span style="color:blueviolet"><b>NOMBRE</b></span>
+                <input type="text" id="Cname" placeholder="nombre">
+                <span style="color:blueviolet"><b>DESCRIPCION</b></span>
+                <input type="text" id="Cdescription" placeholder="descripcion">
+                <!--<select id="select-room"></select> --> 
+            </div>
+                <button onclick="guardarCategorias()">Guardar Categoria</button>
+                <button onclick="consultarCategory()">Consultar Categoria</button>
+        </tbody>      
+    </table>
+    </fieldset>
+<!--Tabla Habitacion-->
+
+    <span style="color:rgb(58, 115, 221)"><h3>HABITACIONES</h3></span>
+    <div id="resultado2"></div>
+    <fieldset style="width: 8%">
+        <legend>Creación de Habitacion</legend>
+    <table>
+        <tbody>
+        <!--       <script type="text/javascript"> 
+                    window.onload = consultarRoom();
+                </script>--> 
+            <div>
+                <span style="color:blueviolet"><b>NOMBRE</b></span>
+                <input type="text" id="Rname" placeholder="nombre">
+                <span style="color:blueviolet"><b>HOTEL</b></span>
+                <input type="text" id="Rhotel" placeholder="hotel">
+                <span style="color:blueviolet"><b>STARS</b></span>
+                <input type="number" id="Rstars" placeholder="stars">
+                <span style="color:blueviolet"><b>DESCRIPCION</b></span>
+                <input type="text" id="Rdescription" placeholder="descripcion">
+                <select id="select-message"></select>
+                <select id="select-category"></select> <!--ESTO ES PARA UNIR LA DE CATEGORIAS CON LA OTRA-->
+                
+            </div>
+                <button onclick="guardarRoom()">Guardar Habitacion</button>
+                <button onclick="consultarRoom()">Consultar Habitacion</button>
+        </tbody>      
+    </table>
+    </fieldset>  
+
+<!--Tabla Cliente-->
+    <span style="color:rgb(58, 115, 221)"><h3>CLIENTE</h3></span>
+    <div id="resultado3"></div>
+        <fieldset style="width: 10%">
+            <legend>Creación nuevo cliente</legend>
+        <table>
+            <tbody>
+                <div id="resultado3"></div>
+            <!--      <script type="text/javascript"> 
+                        window.onload = consultarCliente();
+                    </script>-->  
+                <div>
+                    <span style="color:blueviolet"><b>EMAIL</b></span>
+                    <input type="text" id="Clemail" placeholder="email">
+                    <span style="color:blueviolet"><b>PASSWORD</b></span>
+                    <input type="text" id="Clpassword" placeholder="password">
+                    <span style="color:blueviolet"><b>NOMBRE</b></span>
+                    <input type="text" id="Clname" placeholder="nombre">
+                    <span style="color:blueviolet"><b>AGE</b></span>
+                    <input type="number" id="Clage" placeholder="edad">
+                </div>
+                    <button onclick="guardarCliente()">Guardar Cliente</button>
+                    <button onclick="consultarCliente()">Consultar Cliente</button>
+            </tbody>      
+        </table>
+        </fieldset>
+
+<!--Tabla Message-->
+    <span style="color:rgb(58, 115, 221)"><h3>MESSAGE</h3></span>
+    <div id="resultado4"></div>
+    <fieldset style="width: 11%">
+        <legend>Creación nuevo mensaje</legend>
+    <table>
+        <tbody>
+        <!--   <script type="text/javascript"> 
+                 window.onload =  consultarMessage();
+            </script>--> 
+            <div>
+                <span style="color:blueviolet"><b>MENSAGE</b></span>
+                <input type="text" id="MmessageText" placeholder="Message">
+            </div>
+                <button onclick="guardarMessage()">Guardar Message</button>
+                <button onclick="consultarMessage()">Consultar Message</button>
+        </tbody>      
+    </table>
+    </fieldset>
+
+    <!--Tabla Reservation-->
+    <span style="color:rgb(58, 115, 221)"><h3>RESERVATION</h3></span>
+    <div id="resultado5"></div>
+    <fieldset style="width: 11%">
+        <legend>Creación nueva reservacion</legend>
+    <table>
+        <tbody>
+                <script type="text/javascript"> 
+                    window.onload =  consultarReservation();
+                </script>
+            <div>
+                <input type="text" id="RestartDate" placeholder="Fecha de Inicio">
+                <input type="text" id="RedevolutionDate" placeholder="Fecha de Devolucion">
+                <select id="select-client"></select> 
+                <select id="select-room"></select>
+            </div>  
+                <button onclick="guardarReservation()">Guardar Reservacion</button>
+                <button onclick="consultarReservation()">Consultar Reservacion</button>
+        </tbody>      
+    </table>
+    </fieldset>
+<!--Reportes de Status-->
+
+    <span style="color:rgb(58, 115, 221)"><h3>STATUS RESERVAS</h3></span>
+    <div id="resultadoStatus"></div>
+    <fieldset style="width: 10%">
+        <legend>Status reservacion</legend>
+    <table>
+        <tbody>
+            <button onclick="traerReporteStatus()"> Status Reservas </button>
+        </tbody>      
+    </table>
+    </fieldset>
+
+    <span style="color:rgb(58, 115, 221)"><h3>STATUS FECHAS</h3></span>
+    <div id="resultadoDate"></div>
+    <fieldset style="width: 11%">
+        <legend>Status reservacion</legend>
+    <table>
+        <tbody>
+            <span style="color:blueviolet"><b>DÍA DE INICIO</b></span>
+            <input type="date" id="RstarDate" placeholder="descripcion">
+            <span style="color:blueviolet"><b>DÍA DE FINALIZACION</b></span>
+            <input type="date" id="RdevolutionDate" placeholder="descripcion">
+            <button onclick="traerReporteDate()"> Reporte por fecha </button>
+        </tbody>      
+    </table>
+    </fieldset>
+ 
+    <span style="color:rgb(58, 115, 221)"><h3>STATUS RESERVACION</h3></span>
+    <div id="resultadoClientes"></div>
+    <fieldset style="width: 15%">
+        <legend>Status reservacion</legend>
+    <table>
+        <tbody>
+            <button onclick="traerReporteClientes()">  Reporte Clientes y Reservas por cliente </button>
+        </tbody>      
+    </table>
+    </fieldset>
+</body>
+</html>
